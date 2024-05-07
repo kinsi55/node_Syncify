@@ -2,27 +2,27 @@
 
 Spotify is annoying. As a free user, I am not in a position to complain - I am however in a position to do something about it, hence I created this.
 
-Syncify allows you to input a list of Playlists and it will create and maintain an offline mirror of those playlists.
+Syncify allows you to configure a set of Playlists and it will create and maintain an offline Mirror of those Playlists.
 
 ## Features
 
 - **Downloads directly from Spotify**, what you see is what you get
 - Basic ID3 tags are applied to the downloaded songs where available
+- Album Art can be downloaded / embedded if desired
 - Songs added and removed to the playlist are detected and handled accordingly
-
-## Autosync (Optional)
-
-By default whenever you run this tool it will try to update your local playlists state to reflect the online ones. If you'd rather want to run this tool in the background and have it automagically apply changes made to the playlists in realtime, you can set `enableAutoSync` to true in the config
+	- Songs going unavailable are excempt from this and will stay downloaded
+- Autosync ✨(Optional)
+	- By default whenever you run this tool it will try to update your local playlists state to reflect the online ones. If you'd rather want to run this tool in the background and have it automagically apply changes made to the playlists in realtime, you can set `enableAutoSync` to true in the config
 
 ## Setup
 
-- This tool needs to be signed into Spotify to work, to accomplish this you supply your login cookie `sp_dc` in a cookie.txt file
+This tool needs to be signed into Spotify to work, to accomplish this you supply your `sp_dc` Cookie. I might add a guide how to get that at some point
 
 ## Config
 
 ### cookie.txt
 
-This file is placed in the root directory and contains the value of your `sp_dc` login-cookie. I might add a guide how to get that at some point
+This file is placed in the root directory and contains the value of your `sp_dc` login-cookie.
 
 ### config.json
 
@@ -41,7 +41,9 @@ This file is placed in the root directory
 
 ### targets.txt
 
-This file is placed in the configured `repoDirectory`, it contains a list of playlists for Syncify to manage. Note that changes made to it are applied automatically on save if `enableAutoSync` is used
+This file is placed in the configured `repoDirectory`, it contains a list of Playlists for Syncify to manage.
+
+ℹ Changes made to it are applied automatically on save if `enableAutoSync` is used!
 
 ## TODO
 
