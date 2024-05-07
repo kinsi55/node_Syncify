@@ -35,7 +35,7 @@ async function targetsUpdated() {
 
 	const playlists = await targetsUpdated();
 
-	if(!Config.enabledAutoSync)
+	if(!Config.enableAutoSync)
 		return;
 
 	sync = new Sync(accessToken, playlists);

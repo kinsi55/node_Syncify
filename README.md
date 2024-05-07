@@ -12,7 +12,7 @@ Syncify allows you to input a list of Playlists and it will create and maintain 
 
 ## Autosync (Optional)
 
-By default whenever you run this tool it will try to update your local playlists state to reflect the online ones. If you'd rather want to run this tool in the background and have it automagically apply changes made to the playlists in realtime, you can set `enabledAutoSync` to true in the config
+By default whenever you run this tool it will try to update your local playlists state to reflect the online ones. If you'd rather want to run this tool in the background and have it automagically apply changes made to the playlists in realtime, you can set `enableAutoSync` to true in the config
 
 ## Setup
 

@@ -8,5 +8,5 @@
 	"deleteRemovedSongs": true,
 	"ffmpeg_path": null,
 	"repoDirectory": "repo",
-	"enabledAutoSync": true
+	"enableAutoSync": true
 }
