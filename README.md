@@ -22,7 +22,6 @@ By default whenever you run this tool it will try to update your local playlists
 
 - A lot of Error handling / retry logic is missing
 - Songs removed are only deleted via Autosync right now
-- Album covers currently are not downloaded
 
 ## Motivation(s)
 
