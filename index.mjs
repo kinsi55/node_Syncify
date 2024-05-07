@@ -1,6 +1,6 @@
 import { SpotifyApi } from "./lib/spotifyapi.mjs";
 import { Sync } from "./lib/sync.mjs";
-import { PlaylistDownloader } from "./lib/playlistdownloader.mjs";
+import { PlaylistManager } from "./lib/playlistmanager.mjs";
 import { readFile, watch } from "node:fs/promises";
 import { join } from "node:path";
 import Config from "./lib/settings.mjs";
@@ -21,7 +21,7 @@ async function targetsUpdated() {
 	const playlists = targets.map(x => playlistUrlRegex.exec(x)?.[1]);
 
 	for(const playlistId of playlists)
-		await PlaylistDownloader.downloadPlaylist(playlistId, {force: true});
+		await PlaylistManager.downloadPlaylist(playlistId, {force: true});
 
 	sync?.setTargets(playlists);
 
