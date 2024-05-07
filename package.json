@@ -1,0 +1,28 @@
+{
+  "name": "syncify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kinsi",
+  "license": "MIT",
+  "dependencies": {
+    "@keyvhq/core": "^2.1.1",
+    "@keyvhq/file": "^2.1.1",
+    "aes-cmac": "^3.0.1",
+    "binary-parser": "^2.2.1",
+    "fastq": "^1.17.1",
+    "node-fetch": "^3.3.2",
+    "protobufjs": "^7.2.6",
+    "reconnecting-websocket": "^4.4.0",
+    "sanitize-filename": "^1.6.3",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "eslint": "^7.32.0"
+  }
+}

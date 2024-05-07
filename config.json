@@ -1,0 +1,12 @@
+{
+	"download": {
+		"downloadCovers": false,
+		"tagSongUrl": true,
+		"concurrency": 3,
+		"format": "MP4_128"
+	},
+	"deleteRemovedSongs": true,
+	"ffmpeg_path": null,
+	"repoDirectory": "repo",
+	"enabledAutoSync": true
+}

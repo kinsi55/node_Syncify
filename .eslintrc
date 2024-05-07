@@ -1,0 +1,73 @@
+{
+	"extends": [
+		"eslint:recommended"
+	],
+	"env": {
+		"node": true,
+		"es6": true
+	},
+
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"ecmaFeatures": {
+			"impliedStrict": true
+		},
+		"requireConfigFile": false
+	},
+
+	"parser": "@babel/eslint-parser",
+
+	"rules": {
+		//"camelcase":                    ["warn", {"properties": "always"}],
+		"comma-style":                  ["error", "last"],
+		"curly":                        [0],
+		"eqeqeq":                       ["error", "always"],
+		"eol-last":                     ["warn", "never"],
+		"handle-callback-err":          ["error"],
+		"indent":                       ["error", "tab", {"SwitchCase": 1}],
+		"linebreak-style":              ["error", "windows"],
+		"no-mixed-spaces-and-tabs":     ["error", "smart-tabs"],
+		"no-return-assign":             ["error", "except-parens"],
+		"no-sequences":                 ["error"],
+		"no-trailing-spaces":           ["warn"],
+		"no-undef":                     ["error"],
+		"no-empty":                     ["error", {"allowEmptyCatch": true}],
+		"no-template-curly-in-string":  ["error"],
+		"object-shorthand":             ["warn"],
+		"quote-props":                  ["warn", "as-needed"],
+		"array-callback-return":        ["error"],
+		"no-eval":                      ["error"],
+		"no-var":                      	["warn"],
+		"no-useless-escape":            ["warn"],
+		"prefer-template":              ["warn"],
+
+		//"multiline-comment-style":      ["warn", "starred-block"],
+		"spaced-comment":      					["warn", "always", {
+			"markers": ["TODO:", "NOTE:", "FIXME:", "HACK:"]
+		}],
+
+		"template-curly-spacing":       ["warn", "never"],
+		"space-before-function-paren":  ["warn", "never"],
+		"space-before-blocks":          ["error", "always"],
+		"space-infix-ops":              ["error"],
+		"space-in-parens":              ["error", "never"],
+		"comma-spacing":                ["error"],
+		"arrow-spacing":                ["error"],
+		"keyword-spacing":         			["error", {
+			"overrides": {
+				"if": {"after": false},
+				"for": {"after": false},
+				"while": {"after": false},
+				"switch": {"after": false},
+				"catch": {"after": false}
+			}
+		}],
+
+		"no-return-await":              ["warn"],
+		"no-unexpected-multiline":      ["warn"],
+		"no-unused-vars":               ["warn", {"args": "none"}],
+		"quotes":                       ["error", "double", {"allowTemplateLiterals": true}],
+		"node/no-unpublished-require":  [0],
+		"no-prototype-builtins":  [0]
+	}
+}

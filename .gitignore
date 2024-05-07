@@ -1,0 +1,7 @@
+cookie.txt
+
+node_modules/
+package-lock.json
+
+repo/*
+!repo/targets.txt
