@@ -36,7 +36,7 @@ This file is placed in the root directory
 | download > format | String | The Spotify specific Format of the Song to be downloaded. Currently supported are `MP4_128` when you are a free user or `MP4_256` when you are a premium user |
 | deleteRemovedSongs | Boolean | When false, Songs removed from a Playlist are not deleted from the local copy. Note that Songs that go unavailable are exempt from this setting - If a Song becomes unavailable it stays downloaded |
 | ffmpeg_path | String | Path to the FFMPEG executable, can be `null` if ffmpeg is in your PATH |
-| repoDirectory | String | The directory, relative to the root, where the downloaded playlists are stored |
+| repoDirectory | String | The directory where the downloaded playlists are stored, can be a relative path |
 | enableAutoSync | Boolean | If true, Syncify keeps running after the initial sync. It will then listen for changes made to the watched playlists and applies them as they're made |
 
 ### targets.txt
