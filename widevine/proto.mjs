@@ -1,4 +1,4 @@
-import protobufjs from "protobufjs"
+import protobufjs from "protobufjs";
 
 protobufjs.parse.defaults.keepCase = true;
 

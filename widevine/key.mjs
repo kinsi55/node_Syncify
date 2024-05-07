@@ -20,6 +20,6 @@ export default class Key {
 			null,
 			decryptAES(key.key, encryptionKey, key.iv),
 			[]
-		)
+		);
 	}
 }
