@@ -4,6 +4,7 @@ import { PlaylistManager } from "./lib/playlistmanager.mjs";
 import { readFile, watch } from "node:fs/promises";
 import { join } from "node:path";
 import Config from "./lib/settings.mjs";
+import pRetry from "p-retry";
 
 const playlistUrlRegex = /playlist\/([0-9a-zA-Z]{22})/;
 
@@ -33,12 +34,19 @@ async function targetsUpdated() {
 (async() => {
 	const accessToken = await SpotifyApi.getAccessToken();
 
+	// Token expires every hour, refresh in advance
+	setInterval(() => {
+		pRetry(() => SpotifyApi.getAccessToken()).catch(() => {
+			console.warn("Failed to refresh Access token!");
+		});
+	}, (accessToken.accessTokenExpirationTimestampMs - Date.now()) * 0.9).unref();
+
 	const playlists = await targetsUpdated();
 
 	if(!Config.enableAutoSync)
 		return;
 
-	sync = new Sync(accessToken, playlists);
+	sync = new Sync(SpotifyApi, playlists);
 
 	const watcher = watch(targetsFile, {
 		persistent: false

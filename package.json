@@ -15,6 +15,7 @@
     "binary-parser": "^2.2.1",
     "fastq": "^1.17.1",
     "node-fetch": "^3.3.2",
+    "p-retry": "^6.2.0",
     "protobufjs": "^7.2.6",
     "reconnecting-websocket": "^4.4.0",
     "sanitize-filename": "^1.6.3",
