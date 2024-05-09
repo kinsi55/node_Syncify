@@ -1,11 +1,5 @@
 import { createDecipheriv } from "node:crypto";
 
-function decryptAES(cipherText, encKey, iv) {
-	const decipher = createDecipheriv("aes-128-cbc", encKey, iv);
-
-	return Buffer.from(decipher.update(cipherText));
-}
-
 export default class Key {
 	constructor(type, kid, key, permissions) {
 		this.type = type;
@@ -15,10 +9,12 @@ export default class Key {
 	}
 
 	static fromKeyContainer(key, encryptionKey) {
+		const decipher = createDecipheriv("aes-128-cbc", encryptionKey, key.iv);
+
 		return new Key(
 			key.type,
 			null,
-			decryptAES(key.key, encryptionKey, key.iv),
+			Buffer.from(decipher.update(key.key)),
 			[]
 		);
 	}
