@@ -13,7 +13,7 @@ Syncify allows you to configure a set of Playlists and it will create and mainta
 	- Songs going unavailable are excempt from this and will stay downloaded
 - Autosync ✨(Optional)
 	- By default whenever you run this tool it will try to update your local playlists state to reflect the online ones. If you'd rather want to run this tool in the background and have it automagically apply changes made to the playlists in realtime, you can set `enableAutoSync` to true in the config
-	- For now, this only works for your own Playlists, I'll have to see if its possible to implement this for public ones.
+	- Autosync only works for playlists that are in your library, so if you want autosync to work for playlists created by others you have to add them to your library.
 
 ## Setup
 
