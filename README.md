@@ -9,15 +9,15 @@ Syncify allows you to configure a set of Playlists and it will create and mainta
 - **Downloads directly from Spotify**, what you see is what you get
 - Basic ID3 tags are applied to the downloaded songs where available
 - Album Art can be downloaded / embedded if desired
-- Songs added and removed to the playlist are detected and handled accordingly
-	- Songs going unavailable are excempt from this and will stay downloaded
+- Songs added and removed to the Playlist are detected and handled accordingly
+	- Songs going unavailable are exempt from this and will stay downloaded
 - Autosync ✨(Optional)
-	- By default whenever you run this tool it will try to update your local playlists state to reflect the online ones. If you'd rather want to run this tool in the background and have it automagically apply changes made to the playlists in realtime, you can set `enableAutoSync` to true in the config
-	- Autosync only works for playlists that are in your library, so if you want autosync to work for playlists created by others you have to add them to your library.
+	- By default whenever you run Syncify it will try to update your local Playlists state to reflect the online ones. If you'd rather want to run it in the background and have it automagically apply changes made to the Playlists in realtime, you can set `enableAutoSync` to true in the config
+	- Autosync only works for Playlists that are in your library, so if you want autosync to work for Playlists created by others you have to add them to your library.
 
 ## Setup
 
-This tool needs to be signed into Spotify to work, to accomplish this you supply your `sp_dc` Cookie. I might add a guide how to get that at some point
+Syncify needs to be signed into Spotify to work, to accomplish this you supply your `sp_dc` Cookie. I might add a guide how to get that at some point
 
 ## Config
 
@@ -37,8 +37,8 @@ This file is placed in the root directory
 | download > format | String | The Spotify specific Format of the Song to be downloaded. Currently supported are `MP4_128` when you are a free user or `MP4_256` when you are a premium user |
 | deleteRemovedSongs | Boolean | When false, Songs removed from a Playlist are not deleted from the local copy. Note that Songs that go unavailable are exempt from this setting - If a Song becomes unavailable it stays downloaded |
 | ffmpeg_path | String | Path to the FFMPEG executable, can be `null` if ffmpeg is in your PATH |
-| repoDirectory | String | The directory where the downloaded playlists are stored, can be a relative path |
-| enableAutoSync | Boolean | If true, Syncify keeps running after the initial sync. It will then listen for changes made to the watched playlists and applies them as they're made |
+| repoDirectory | String | The directory where the downloaded Playlists are stored, can be a relative path |
+| enableAutoSync | Boolean | If true, Syncify keeps running after the initial sync. It will then listen for changes made to the watched Playlists and applies them as they're made |
 
 ### targets.txt
 
