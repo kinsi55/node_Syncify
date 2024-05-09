@@ -22,7 +22,7 @@ async function targetsUpdated() {
 	const playlists = targets.map(x => playlistUrlRegex.exec(x)?.[1]);
 
 	for(const playlistId of playlists)
-		await PlaylistManager.downloadPlaylist(playlistId, {force: true});
+		await PlaylistManager.downloadPlaylist(playlistId);
 
 	sync?.setTargets(playlists);
 
