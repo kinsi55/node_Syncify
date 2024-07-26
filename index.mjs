@@ -4,7 +4,6 @@ import { PlaylistManager } from "./lib/playlistmanager.mjs";
 import { readFile, watch } from "node:fs/promises";
 import { join } from "node:path";
 import Config from "./lib/settings.mjs";
-import pRetry from "p-retry";
 
 const playlistUrlRegex = /playlist\/([0-9a-zA-Z]{22})/;
 
