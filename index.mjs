@@ -19,9 +19,23 @@ async function targetsUpdated() {
 
 	sync?.pause();
 
-	const playlists = targets.map(x => playlistUrlRegex.exec(x)?.[1]);
+	const playlists = [];
 
-	sync?.setTargets(playlists);
+	for(const target of targets) {
+		if(target.startsWith("FOLDER:")) {
+			//TODO: Add support for watching entire folders at some point
+		} else {
+			const playlist = playlistUrlRegex.exec(target)?.[1];
+
+			if(playlist) {
+				playlists.push(playlist);
+				continue;
+			}
+		}
+		console.warn("Unknown Target:", target);
+	}
+
+	sync?.setPlaylists(playlists);
 
 	for(const playlistId of playlists)
 		await PlaylistManager.downloadPlaylist(playlistId);

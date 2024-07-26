@@ -57,7 +57,7 @@ export default class CDM {
 		const signature = this.signer.sign({
 			key: this.#privateKey,
 			padding: cryptoConstants.RSA_PKCS1_PSS_PADDING,
-			saltLength: 20
+			saltLength: cryptoConstants.RSA_PSS_SALTLEN_DIGEST
 		});
 
 		const signedLicenseRequest = SignedMessage.encode({

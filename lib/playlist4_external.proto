@@ -24,6 +24,12 @@ enum ItemAttributeKind {
 	ITEM_ID = 12;
 }
 
+message RootlistModificationInfo {
+	optional bytes new_revision = 1;
+	optional bytes parent_revision = 2;
+	repeated Op ops = 3;
+}
+
 message ItemAttributesPartialState {
 	required ItemAttributes values = 1;
 	repeated ItemAttributeKind no_value = 2;
