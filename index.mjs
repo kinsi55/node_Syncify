@@ -32,14 +32,7 @@ async function targetsUpdated() {
 }
 
 (async() => {
-	const accessToken = await SpotifyApi.getAccessToken();
-
-	// Token expires every hour, refresh in advance
-	setInterval(() => {
-		pRetry(() => SpotifyApi.getAccessToken()).catch(() => {
-			console.warn("Failed to refresh Access token!");
-		});
-	}, (accessToken.accessTokenExpirationTimestampMs - Date.now()) * 0.9).unref();
+	await SpotifyApi.refreshTokenIfNecessary();
 
 	const playlists = await targetsUpdated();
 
