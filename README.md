@@ -49,6 +49,7 @@ This file is placed in the configured `repoDirectory`, it contains a list of Pla
 ## TODO
 
 - A lot of Error handling / retry logic is missing
+- If you have duplicates of a song in a playlist, deleting one of the entries would delete the song off your disk (If you have `deleteRemovedSongs` enabled)
 
 ## Motivation(s)
 
