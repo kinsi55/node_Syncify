@@ -34,11 +34,14 @@ This file is placed in the root directory
 | download > downloadCovers | Boolean | If true, the Album Art is downloaded and embedded in the Songs |
 | download > tagSongUrl | Boolean | If true, the Songs Spotify URL is added as a Comment in the ID3 tags of the Song |
 | download > concurrency | Integer | Dictates how many songs are downloaded in parallel |
-| download > format | String | The Spotify specific Format of the Song to be downloaded. Currently supported are `MP4_128` when you are a free user or `MP4_256` when you are a premium user |
+| download > format | String | The Spotify specific Format of the Song to be downloaded. If you are a free user, you can use `OGG_VORBIS_160` / `MP4_128`* or `OGG_VORBIS_320` / `MP4_256`* as a Premium user |
+| wvd | String | Base64 WVD identifier |
 | deleteRemovedSongs | Boolean | When false, Songs removed from a Playlist are not deleted from the local copy. Note that Songs that go unavailable are exempt from this setting - If a Song becomes unavailable it stays downloaded |
 | ffmpeg_path | String | Path to the FFMPEG executable, can be `null` if ffmpeg is in your PATH |
 | repoDirectory | String | The directory where the downloaded Playlists are stored, can be a relative path |
 | enableAutoSync | Boolean | If true, Syncify keeps running after the initial sync. It will then listen for changes made to the watched Playlists and applies them as they're made |
+
+*: To download MP4 formats you need to provide a wvd identifier
 
 ### targets.txt
 
