@@ -1,9 +1,9 @@
 {
 	"download": {
-		"downloadCovers": false,
+		"downloadCovers": true,
 		"tagSongUrl": true,
 		"concurrency": 3,
-		"format": "MP4_128"
+		"format": "OGG_VORBIS_160"
 	},
 	"deleteRemovedSongs": true,
 	"ffmpeg_path": null,
