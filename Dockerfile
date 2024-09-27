@@ -10,6 +10,7 @@ RUN npm install --quiet --omit=dev
 
 ADD lib lib/
 ADD widevine widevine/
+ADD playplay playplay/
 
 COPY index.mjs ./
 
