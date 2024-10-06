@@ -39,7 +39,7 @@ async function targetsUpdated() {
 	for(const playlistId of playlists)
 		await PlaylistManager.downloadPlaylist(playlistId);
 
-	sync?.resume();
+	sync?.unpause();
 
 	return playlists;
 }
