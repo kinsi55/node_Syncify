@@ -14,7 +14,6 @@ WORKDIR /app
 
 RUN apk add --no-cache ffmpeg
 ADD widevine widevine/
-ADD playplay playplay/
 COPY --from=build app/node_modules node_modules/
 ADD lib lib/
 
